@@ -576,7 +576,7 @@ module.exports = [{
   optimization: {
     minimizer: [
       new TerserPlugin({
-        parallel: true,
+        parallel: 2, // When building with rasbian, if `true`, an out of memory error will occur.
         extractComments: true,
         terserOptions: {
           compress: true,
